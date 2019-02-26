@@ -9,16 +9,18 @@ class members:
 def getMemberData():
     memberData=[]
     import csv
-    with open('members.txt') as data:
-        memberinfo=csv.reader(data)
+    with open('members.txt','r') as data:
+        memberinfo=csv.reader(data,delimiter=',')
         for row in memberinfo:
-            memberData.append(members(row[0],row[1],row[2]))
+            memberData.append(members(row[0],row[1],float(row[2])))
+            print(row[0],row[1],row[2])
+            print(memberData)
         return memberData
 
 def maxDistanceWalked(memberData):
     maxDistance=memberData[0].distance
-    for x in memberData:
-            if memberData[x.distance>maxDistance]:
+    for x in range(len(memberData)):
+            if memberData[x].distance>maxDistance:
                 maxDistance = memberData[x].distance
                 print(maxDistance)
     return maxDistance
@@ -27,16 +29,16 @@ def showMaxDistance(maxDistance):
     print("The maximum distance walked is {}".format(maxDistance))
 
 def createResults(memberData,maxDistance):
-    with open('results.txt','w') as resultfile:
+    with open('results.txt','w') as resultsfile:
         resultsfile.write("Walking club results file")
         resultsfile.write("First Name\tSecond Name")
         resultsfile.write("-------------------------------------")
         for x in memberData:
             if x.distance > 0.7*maxDistance:
-                resultsfile.write("{}\t{}".format(memberData[x.fname],memberData[x.sname]))
+                resultsfile.write("{}\t{}".format(memberData[x].fname,memberData[x].sname))
         resultsfile.close()
 
 memberdata=getMemberData()
 maxDistance=maxDistanceWalked(memberdata)
-showMaxDistance(MaxDistance)
+showMaxDistance(maxDistance)
 createResults(memberdata,maxDistance)
