@@ -30,12 +30,13 @@ def showMaxDistance(maxDistance):
 
 def createResults(memberData,maxDistance):
     with open('results.txt','w') as resultsfile:
-        resultsfile.write("Walking club results file")
-        resultsfile.write("First Name\tSecond Name")
-        resultsfile.write("-------------------------------------")
-        for x in memberData:
-            if x.distance > 0.7*maxDistance:
-                resultsfile.write("{}\t{}".format(memberData[x].fname,memberData[x].sname))
+        resultsfile.write("Walking club results file\n")
+        resultsfile.write("First Name               Second Name\n")
+        resultsfile.write("-------------------------------------\n")
+        for x in range(len(memberData)):
+            if memberData[x].distance > 0.7*maxDistance:
+                resultsfile.write("{}{}".format(memberData[x].fname,memberData[x].sname.rjust(18)))
+                resultsfile.write("\n")
         resultsfile.close()
 
 memberdata=getMemberData()
