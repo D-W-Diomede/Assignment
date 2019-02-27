@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Patience</title>
+<link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+<script>
+function showMe(target) {
+    var boxes = document.getElementsByClassName("descriptions")
+    var loop;
+    for (loop = 0; loop < boxes.length; loop++) {
+        boxes[loop].style.display = "none";
+    }
+    
+     document.getElementById("descriptions"+target,"display:block;")
+}
+</script>
+</head>
+
+<body>
+
+<!-- Page Header -->
+<header>
+<img class="imageBannerLeft" src="../images/bannerCardsLeft.png">
+<img class="imageBannerRight" src="../images/bannerCardsRight.png">
+<h1>Playing Cards</h1>
+
+</header>
+
+<!-- Navigation Bar -->
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="history.html">History</a></li>
+<li><a href="multi.html">Multi-player</a></li>
+<li><a href="single.html">Single-player</a></li>
+<li><a href="register.html">Free Cards</a></li>
+</ul>
+</nav>
+
+<!-- The main content of the page -->
+<main>
+<section>
+<h2>Popular Patience Games</h2>
+<p>Click on the names below to read more about each game of patience.</p>
+<p>
+<img class="patienceButtons" src="../images/klondikeButton.png" onclick="showMe('0')">
+<img class="patienceButtons" src="../images/freecellButton.png" onclick="showMe('1')">
+<img class="patienceButtons" src="../images/pyramidButton.png"  onclick="showMe('2')">
+</p>
+</section>
+
+<section class='descriptions' id='descriptions0'>
+<img class="patiencePhotos" src="../images/klondikePhoto.jpeg">
+<h2>Klondike</h2>
+<p>Klondike is the best known of the patience games.  It was invented in the late 19th century and was named after the place Klondike, the gold rush area in Canada. Some think it may have been invented by the gold prospectors of the time. </p>
+<p>Klondike is played by laying 7 piles of cards face down with each pile having one more card than the pile to its left.  The top card of each pile is turned face up.  The remaining cards are placed face down in a separate playing pile.</p>
+<p>The player must build new 4 piles (one for each suit) starting with the ace, then 2, then 3 and so on.  The piles are created as the next cards required to build each pile are discovered.</p>
+</section>
+
+<section class='descriptions' id='descriptions1'>
+<img class="patiencePhotos" src="../images/freecellPhoto.jpeg">
+<h2>Freecell</h2>
+<p>FreeCell is played using the standard 52-card deck. Compared to most patience games it is very easy to complete the game. All cards are dealt face-up at the beginning of the game.</p>
+<p>FreeCell has been included as part of Windows since 1995 making it very popular.  Many other platforms have attempted to replicate the MicroSoft version as players don't tend to like variations from that version.</p>
+<p>The game begins with four open cells and four foundations.  A standard 52 card deck of cards is used.</p>
+<p>Cards are dealt face-up into eight columns positioned so that every card can be seen.  Four columns have seven cards and four have six cards.</p>
+<p>The top card of any colum can be covered with a card one lower in value and the opposite colour. Foundations are built up by suit.</p>
+<p>The four cells can be used to temporarly store cards while moving other cards around.</p>
+<p>The game is complete when all four foundation piles are complete from Ace to King in their correct suits. </p>
+</section>
+
+
+<section class='descriptions' id='descriptions2'>
+<img class="patiencePhotos" src="../images/pyramidPhoto.jpeg">
+<h2>Pyramid</h2>
+<p>The object is to remove all the cards from the pyramid to the foundation. </p>
+<p>The game begins by laying out a pyramid of cards.  One card at the top covered by two cards on the next row down, covered by three cards on the next row and so on up to the last row of seven cards (28 cards in total).  The remaining cards are placed face down in a pile.</p>
+
+<p>When using a a standard deck, Kings score 13, Queens 12 and Jacks 11.</p>
+
+<p>Play begins by turning over the top card in the face down pile.  Players try to match pairs of cards to a score of 13 (or the King, which itself is worth 13).  When a pair is identified the cards are removed from the game.  If no pair is possible the turned card is placed face up in a discarded cards pile next to the face down pile. A pair may be made from any visible card in the pyramid, the turned card or the last discarded card.</p>
+
+<p>When the pile is complete the discarded cards are turned over and becomes the new pile.</p>
+
+<p>The game is scored by counting the number of cards left in the pyramid at the end of the game. A perfect score is 0 as the whole pyramid has been removed.</p>
+</section>
+
+
+
+</main>
+
+<!-- Page Footer -->
+<footer>
+<p> &copy; Card Foundation <br> 2017 <br> Please provide feedback to: jlongridge@jlinternet.co.uk </p>
+</footer>
+
+</body>
+</html>
