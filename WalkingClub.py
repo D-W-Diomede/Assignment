@@ -4,7 +4,8 @@ class members:
         self.fname = fname
         self.sname = sname
         self.distance = distance
-    
+        self.marathons = self.distance // 26.22
+        print("Debug // self by 26.22 result",self.marathons)    
 
 def getMemberData():
     memberData=[]
@@ -13,8 +14,6 @@ def getMemberData():
         memberinfo=csv.reader(data,delimiter=',')
         for row in memberinfo:
             memberData.append(members(row[0],row[1],float(row[2])))
-            print(row[0],row[1],row[2])
-            print(memberData)
         return memberData
 
 def maxDistanceWalked(memberData):
@@ -22,20 +21,19 @@ def maxDistanceWalked(memberData):
     for x in range(len(memberData)):
             if memberData[x].distance>maxDistance:
                 maxDistance = memberData[x].distance
-                print(maxDistance)
     return maxDistance
 
 def showMaxDistance(maxDistance):
-    print("The maximum distance walked is {}".format(maxDistance))
+    print("\nThe maximum distance walked is {}".format(maxDistance))
 
 def createResults(memberData,maxDistance):
     with open('results.txt','w') as resultsfile:
         resultsfile.write("Walking club results file\n")
-        resultsfile.write("First Name               Second Name\n")
-        resultsfile.write("-------------------------------------\n")
+        resultsfile.write("First Name     Second Name     Marathons Ran\n")
+        resultsfile.write("-----------------------------------------------------------------\n")
         for x in range(len(memberData)):
             if memberData[x].distance > 0.7*maxDistance:
-                resultsfile.write("{}{}".format(memberData[x].fname,memberData[x].sname.rjust(18)))
+                resultsfile.write("{}{}{}".format(memberData[x].fname,memberData[x].sname.rjust(15),str(memberData[x].marathons).rjust(30)))
                 resultsfile.write("\n")
         resultsfile.close()
 

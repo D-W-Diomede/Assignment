@@ -1,0 +1,90 @@
+/* The Universal Selector has been used here to cancel the browser default margins and */
+/* padding for every page element.  This ensures that only assigned margin and padding values are seen when viewing pages. */
+* {margin:0;padding:0}
+
+/* Margins - main page areas */
+header, main, footer  {margin-top:5px}
+
+/* Padding */
+header, footer, section {padding:10px}
+
+/* Positioning (Float, Display and Clear) */
+header, nav, main, footer {display:block;clear:both}
+.hidden{display:none}
+
+
+/* Background Colours */
+body, div, main {background-color:LightBlue}
+nav {background-color:LightSteelBlue}
+header, footer {background-color:DarkBlue}
+section {background-color:White}
+
+
+
+/* CSS specific to page areas */
+
+/* Body */
+body{margin:auto;width:1000px}
+
+
+
+/* Header */
+header {height:60px}
+h1{font-family:Verdanda;color:White;font-size:30pt;text-align:center;display:block}
+.imageBannerRight {width:60px;height:60px;float:right}
+.imageBannerLeft {width:60px;height:60px;float:left}
+
+
+
+/* Nav */
+nav  {margin-top:0px}
+nav {height:34px}
+
+nav ul {list-style-type:none}
+nav ul li {float:left;width:200px;text-align:center}
+nav ul li a {display:block;padding:8px}
+nav ul li a:hover {background-color:DarkBlue;color:White}
+
+
+
+/* Main */
+main {display:block}
+main section {margin-bottom:5px}
+p ul {margin-top:15px;margin-bottom:15px;font-size:12pt;text-align:left}
+h2, p{font-family:Helvetica;color:Black}
+h2 {margin-bottom:10px;font-size:14pt;text-align:left}
+p{margin-bottom:10px;font-size:10pt;text-align:left}
+input, select {margin-left:50px}
+
+
+/*Home Page*/
+.imageLargeLeft {width:300px;height:225px;float:left;margin-right:10px;margin-bottom:10px}
+
+/* History Page  */
+.imageCardsRight {width:220px;height:90px;float: right;}
+#midsection {margin: 10px;}
+#midsectionLeft {width: 480px;display: inline-block;float: left;padding:5px;}
+#midsectionRight {width: 480px;display: inline-block;float: right;padding:5px;}
+
+
+/* Patience Games Page  */
+.imageMediumRight {width:120px;height:90px;float:right;margin-left:10px;margin-bottom:10px}
+.patienceButtons {width:250px;height:170px;margin-left:30px;margin-right:30px}
+.patiencePhotos {width:180px;height:135px;float:right;margin-left:10px;margin-bottom:20px}
+
+/*Single Page*/
+.imageLargeRight {width:300px;height:225px;float:right;margin-left:10px;margin-bottom:10px}
+
+/*Multi Page*/
+.multiPhotos {width:330px;height:200px;margin-bottom:5px}
+.firstTwoColumns {float:left;width:330px;margin-right:5px}
+.thirdColumn {float:left;width:329px}
+
+
+
+
+/* Footer */
+footer {height:50px}
+footer p {font-family:Verdanda;text-align:left;color:White;font-size:10pt;margin-top:0px}
+
+
