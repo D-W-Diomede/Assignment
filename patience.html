@@ -5,15 +5,29 @@
 <title>Patience</title>
 <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
 <script>
-function showMe(target) {
+function closeDialogue() {
     var boxes = document.getElementsByClassName("descriptions")
     var loop;
     for (loop = 0; loop < boxes.length; loop++) {
         boxes[loop].style.display = "none";
     }
-    
-     document.getElementById("descriptions"+target,"display:block;")
 }
+
+function showDialogueOne() {
+    closeDialogue()
+    document.getElementById('descriptions0').style.display = "block"
+}
+
+function showDialogueTwo() {
+    closeDialogue()
+    document.getElementById('descriptions1').style.display = "block"
+}
+
+function showDialogueThree() {
+    closeDialogue()
+    document.getElementById('descriptions2').style.display = "block"
+}
+
 </script>
 </head>
 
@@ -44,9 +58,9 @@ function showMe(target) {
 <h2>Popular Patience Games</h2>
 <p>Click on the names below to read more about each game of patience.</p>
 <p>
-<img class="patienceButtons" src="../images/klondikeButton.png" onclick="showMe('0')">
-<img class="patienceButtons" src="../images/freecellButton.png" onclick="showMe('1')">
-<img class="patienceButtons" src="../images/pyramidButton.png"  onclick="showMe('2')">
+<img class="patienceButtons" src="../images/klondikeButton.png" onclick="showDialogueOne()">
+<img class="patienceButtons" src="../images/freecellButton.png" onclick="showDialogueTwo()">
+<img class="patienceButtons" src="../images/pyramidButton.png"  onclick="showDialogueThree()">
 </p>
 </section>
 
